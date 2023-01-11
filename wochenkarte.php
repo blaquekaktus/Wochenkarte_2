@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <h1 class="text-center">Wochenkarte</h1>
-        <form action=clear.php method="post">
+        <form action=logout.php method="post">
             <div class="row">
                 <input type="submit" name="clear" class="btn btn-danger" value="Logout">
             </div>
