@@ -10,31 +10,31 @@
 <body>
     <div class="container">
         <h1 class="text-center">Wochenkarte</h1>
-        <form action=logout.php method="post">
-            <div class="row">
+        <form action="logout.php" method="post">
                 <input type="submit" name="clear" class="btn btn-danger" value="Logout">
-            </div>
-            <div align=center>
-                <div class="row">
-
-                    <img src="media/pizza.jpg" width="300" height="300" class="img-thumbnail" alt="Pizza" hspace=25 vspace=50>
-                    <img src="media/pizza.jpg" width="300" height="300" class="img-thumbnail" alt="Pizza" hspace=25 vspace=50>
-                    <img src="media/pizza.jpg" width="300" height="300" class="img-thumbnail" alt="Pizza" hspace=25 vspace=50>
-
-
-                </div>
-            </div>
-            <div align=center>
-                <div class="row">
-                    <img src="media/pizza.jpg" width="300" height="300" class="img-thumbnail" alt="Pizza" hspace=25 vspace=50>
-                    <img src="media/pizza.jpg" width="300" height="300" class="img-thumbnail" alt="Pizza" hspace=25 vspace=50>
-                    <img src="media/pizza.jpg" width="300" height="300" class="img-thumbnail" alt="Pizza" hspace=25 vspace=50>
-                </div>
-            </div>
-
-
-
         </form>
+        <div class = "row">
+            <div class="col-4">
+                <img src="media/Menu1.jpg" width="300" height="300" class="img-thumbnail" alt="Pizza" hspace=25 vspace=50>
+            </div>
+            <div class="col-4">
+                <img src="media/pizza.jpg" width="300" height="300" class="img-thumbnail" alt="Pizza" hspace=25 vspace=50>
+            </div>
+            <div class="col-4">
+                <img src="media/pizza.jpg" width="300" height="300" class="img-thumbnail" alt="Pizza" hspace=25 vspace=50>
+            </div>
+        </div>
+        <div class = "row">
+            <div class="col-4">
+                <img src="media/pizza.jpg" width="300" height="300" class="img-thumbnail" alt="Pizza" hspace=25 vspace=50>
+            </div>
+            <div class="col-4">
+                <img src="media/pizza.jpg" width="300" height="300" class="img-thumbnail" alt="Pizza" hspace=25 vspace=50>
+            </div>
+            <div class="col-4">
+                <img src="media/pizza.jpg" width="300" height="300" class="img-thumbnail" alt="Pizza" hspace=25 vspace=50>
+            </div>
+        </div>
     </div>
 </body>
 </html>

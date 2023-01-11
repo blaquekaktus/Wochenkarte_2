@@ -126,7 +126,7 @@ class User
         }
     }
 
-    public function logout(){
+    public static function logout(){
         unset($_SESSION ['email']);
         //session_destroy();
     }
