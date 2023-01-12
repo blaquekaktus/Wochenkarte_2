@@ -59,13 +59,13 @@ if (isset($_POST['submit'])) {
         <div class="container-sm align-content-sm-center" id="cookie">
             <h1 class="text-center"> Wochenkarte</h1>
             <br/>
-            <h3>Willkommen</h3>
+            <h3 class="text-center">Willkommen</h3>
             <form action="index.php" method="post">
                 <div class="form-group text-center">
                     <p>Diese Webseite verwendet Cookies</p>
                 </div class = "form-group">
                 <div class="form-group text-center">
-                    <input class="btn btn-warning" type="submit" name="accept" value="Akzeptieren" required/>
+                    <input class="btn btn-warning text-light col-sm-3" type="submit" name="accept" value="Akzeptieren" required/>
                 </div>
             </form>
         </div>
@@ -73,41 +73,41 @@ if (isset($_POST['submit'])) {
         <?php
     } else {
         ?>
-        <div class="container col-sm-4">
+        <div class="container">
             <h1 class="text-center"> Wochenkarte</h1>
             <br/>
             <form action="index.php" method="post" class="form-group">
-                <h3 class="text-center">Bitte anmelden:</h3>
-                <div class="mb-3 mt-5 align-content-center">
-                    <div class="col-sm-4 ">
+                <h3>Bitte anmelden:</h3>
+                <div>
+                    <div >
                         <label for="email"></label>
                             <input
-                                    type="email"
-                                    class="form-control <?= $user->hasErrors('email') ? 'is-invalid' : '' ?>"
-                            name="email"
-                            placeholder="Enter email"
-                            value="<?=htmlspecialchars($user->getEmail()) ?>"
-                    />
-
+                                type="email"
+                                class = "col-sm-4 mb-5"<?= $user->hasErrors('email') ? 'is-invalid' : '' ?>;
+                                name="email"
+                                placeholder="Enter email"
+                                value="<?=htmlspecialchars($user->getEmail()) ?>"
+                            />
                 <br>
                 <?php if($user->hasErrors('email'))
                 echo "<div>" . $user->getErrors()['email'] . "</div>";
-            ?>
+                ?>
                     </div>
-                    <div class="col-sm-4">
-                        <label for="password"></label>
-                            <input type="password"
-                                   class="form-control" <?= $user->hasErrors('password') ? 'is-invalid' : '' ?>"
-                           name="password"
-                           placeholder="Enter password"
-                           value="<?=htmlspecialchars($user->getPassword()) ?>"
-                            />
 
+                    <div>
+                        <label for="password"></label>
+                            <input
+                                type="password"
+                                class="col-sm-4 mb-5" <?= $user->hasErrors('password') ? 'is-invalid' : '' ?>;
+                                name="password"
+                                placeholder="Enter password"
+                                value="<?=htmlspecialchars($user->getPassword()) ?>"
+                            />
                     <?php if($user->hasErrors('password'))
                         echo "<div>" . $user->getErrors()['password'] . "</div>";
                     ?>
                     </div>
-                    <button type="submit" name="submit" class="btn btn-primary mt-5 text-center">Anmelden</button>
+                    <button type="submit" name="submit" class="btn btn-primary col-sm-4">Anmelden</button>
                 </div>
             </form>
         </div>

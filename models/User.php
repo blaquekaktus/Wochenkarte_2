@@ -128,7 +128,7 @@ class User
 
     public static function logout(){
         unset($_SESSION ['email']);
-        //session_destroy();
+        session_destroy();
     }
 
     public static function isLoggedIn(){
