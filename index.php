@@ -73,17 +73,17 @@ if (isset($_POST['submit'])) {
         <?php
     } else {
         ?>
-        <div class="container">
+        <div class="container col-6">
             <h1 class="text-center"> Wochenkarte</h1>
             <br/>
-            <form action="index.php" method="post" class="form-group">
+            <form action="index.php" method="post">
                 <h3>Bitte anmelden:</h3>
                 <div>
                     <div >
                         <label for="email"></label>
                             <input
                                 type="email"
-                                class = "col-sm-4 mb-5"<?= $user->hasErrors('email') ? 'is-invalid' : '' ?>;
+                                class = "col-sm-6 mb-5"<?= $user->hasErrors('email') ? 'is-invalid' : '' ?>;
                                 name="email"
                                 placeholder="Enter email"
                                 value="<?=htmlspecialchars($user->getEmail()) ?>"
@@ -98,7 +98,7 @@ if (isset($_POST['submit'])) {
                         <label for="password"></label>
                             <input
                                 type="password"
-                                class="col-sm-4 mb-5" <?= $user->hasErrors('password') ? 'is-invalid' : '' ?>;
+                                class="col-sm-6 mb-5" <?= $user->hasErrors('password') ? 'is-invalid' : '' ?>;
                                 name="password"
                                 placeholder="Enter password"
                                 value="<?=htmlspecialchars($user->getPassword()) ?>"
@@ -107,7 +107,7 @@ if (isset($_POST['submit'])) {
                         echo "<div>" . $user->getErrors()['password'] . "</div>";
                     ?>
                     </div>
-                    <button type="submit" name="submit" class="btn btn-primary col-sm-4">Anmelden</button>
+                    <button type="submit" name="submit" class="btn btn-primary col-sm-6">Anmelden</button>
                 </div>
             </form>
         </div>
