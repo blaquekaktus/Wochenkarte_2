@@ -1,3 +1,25 @@
+<?php
+
+require_once 'models/CookieHelper.php';
+
+if(!CookieHelper::checkCookie()){
+
+    header("location: index.php");
+    exit();
+}
+
+session_start();
+
+require_once 'models/User.php';
+
+if (!User::isLoggedIn()){
+
+    header("location: index.php");
+    exit();
+}
+
+?>
+
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
